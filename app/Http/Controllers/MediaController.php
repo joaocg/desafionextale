@@ -126,10 +126,23 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($media)
     {
     
-        $media = Media::with('story')->where('story_id', $id)->paginate(50);
+        return response()->json($media);
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  integer  $story_id
+     * @return \Illuminate\Http\Response
+     */
+    public function showByStory($story_id)
+    {
+    
+        $media = Media::with('story')->where('story_id', $story_id)->paginate(50);
         return response()->json($media);
 
     }
