@@ -106,7 +106,7 @@ class MediaController extends Controller
                 $folder = 'images';
             }
 
-            $finalPath = Storage::putFile($folder, $request->file('media'));
+            $finalPath = Storage::putFile("public/".$folder, $request->file('media'));
 
         
             $arquivo['path'] = $finalPath;
@@ -143,6 +143,8 @@ class MediaController extends Controller
     {
     
         $media = Media::select('path','file_type')->where('story_id', $story_id)->paginate(50);
+        
+
         return response()->json($media);
 
     }
