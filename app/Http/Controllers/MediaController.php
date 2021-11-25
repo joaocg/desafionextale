@@ -126,7 +126,7 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function show($media)
+    public function show(Media $media)
     {
     
         return response()->json($media);
@@ -155,7 +155,7 @@ class MediaController extends Controller
      */
     public function edit(Media $media)
     {
-        //
+        return response()->json(['Disable edit!']);
     }
 
     /**
@@ -167,7 +167,7 @@ class MediaController extends Controller
      */
     public function update(UpdateMediaRequest $request, Media $media)
     {
-        //
+        return response()->json(['Disable update!']);
     }
 
     /**
@@ -176,7 +176,7 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function destroy($media)
+    public function destroy(Media $media)
     {
         return $media->delete();
     }
@@ -190,6 +190,16 @@ class MediaController extends Controller
      */
     public function destroyByUser($media_id, $user_id)
     {
-        return Media::where('id', $media_id)->with('user')->where('user_id', $user_id)->delete();
+        try{
+            $media = Media::where('id', $media_id)->where('user_id', $user_id)->first();
+            if($media){
+                $media->delete();
+                return response()->json(['success'=>1]);
+            }else{
+                return response()->json(['success'=>0, 'msg' => "Media not found"], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['success'=>0, 'msg'=> $e->getMessage()]);
+        }
     }
 }

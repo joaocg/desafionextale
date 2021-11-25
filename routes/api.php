@@ -37,3 +37,5 @@ Route::middleware(['throttle:30|60,1'])
                 $router->delete('/media/{media_id}/user/{user_id}', 'MediaController@destroyByUser');
             });
     });
+
+
