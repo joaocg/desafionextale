@@ -7,7 +7,7 @@ I am passionate about technology and since I was 12 years old I have ventured in
 
 ## About Project
 
-This challenge is part of the backend developer selection phase. Your assessment will be given by the phases you manage to deliver and the way they were developed.
+<p align="center"><a href="https://github.com/nextalebr/desafio-backend" target="_blank">https://github.com/nextalebr/desafio-backend</a></p>
 
 ## Comands run project
 
@@ -51,8 +51,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 ### Fase 1 - Contos
-
-<p align="center"><a href="https://github.com/nextalebr/desafio-backend" target="_blank">https://github.com/nextalebr/desafio-backend</a></p>
 
 - [**POST ->** /api/v1/story ] - Endpoint onde é cadastrado um conto.
   - **DATA**:
