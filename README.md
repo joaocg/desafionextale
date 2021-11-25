@@ -18,7 +18,7 @@ This challenge is part of the backend developer selection phase. Your assessment
 - $ php artisan key:generate
 - $ nano or vi .env
 
-Configure the database credentials in the .env file opened with the previous command, save and close file.
+**Configure the database credentials in the .env file opened with the previous command, save and close file.**
 
 - $ php artisan migrate
 - $ php artisan db:seed --class=UserSeeder
@@ -26,11 +26,17 @@ Configure the database credentials in the .env file opened with the previous com
 
 ## Endpoints
 
-- /api/v1 -> Group routs to api
-- /api/v1/story -> Route, [GET, POST, PUT and DELETE], to listing, create, update and delete of Stories;
-- /api/v1/story/{id} -> Route, [GET], to liting sotiry by id;
-- /api/v1/media -> Route, [GET, POST, PUT and DELETE], to listing, create, update and delete of Medias;
-- /api/v1/media/{id} -> Route, [GET], to liting media by id;
+- [**POST ->** /api/v1/story ] - Endpoint where a story is registered.
+   - **DATE**:
+     - **title** | string
+     - **body** | text
+     - **is_enabled** | boolean
+     - **created_at** | datetime
+     - **updated_at** | datetime
+- [**GET ->** /api/v1/story ] - Endpoint for listing these stories, sorted in descending order of registration (newest to oldest);
+- [**GET ->** /api/v1/story/{story_id} ] - Endpoint to list a single tale by its id;
+- [**PUT ->** /api/v1/story/{story_id} ] - Endpoint to edit a single story through its id;
+- [**DELETE ->** /api/v1/story/{story_id} ] - Endpoint to delete a story by its id.
 
 ## License
 
