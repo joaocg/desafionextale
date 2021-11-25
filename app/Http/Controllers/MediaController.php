@@ -142,7 +142,7 @@ class MediaController extends Controller
     public function showByStory($story_id)
     {
     
-        $media = Media::with('story')->where('story_id', $story_id)->paginate(50);
+        $media = Media::select('path','file_type')->where('story_id', $story_id)->paginate(50);
         return response()->json($media);
 
     }
