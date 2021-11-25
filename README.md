@@ -38,6 +38,9 @@ This challenge is part of the backend developer selection phase. Your assessment
 - [**GET ->** /api/v1/story/{story_id} ] - Endpoint to list a single tale by its id;
 - [**PUT ->** /api/v1/story/{story_id} ] - Endpoint to edit a single story through its id;
 - [**DELETE ->** /api/v1/story/{story_id} ] - Endpoint to delete a story by its id.
+- [**POST ->** /api/v1/media ] - Endpoint where it will be possible to upload a video, music or image with a maximum size of 5MB
+- [**GET ->** /api/v1/media/story/{story_id} ] - Endpoint where, when passing the tale id, return the linked media url
+- [**DELETE ->** /api/v1/media/{media_id} ] - Endpoint where you can delete a media related to a user.
 
 ## License
 
@@ -61,3 +64,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - [**GET ->** /api/v1/story/{story_id} ] - Endpoint para listar um único conto através do seu id;
 - [**PUT ->** /api/v1/story/{story_id} ] - Endpoint para editar um único conto através do seu id;
 - [**DELETE ->** /api/v1/story/{story_id} ] - Endpoint para excluir um conto através do seu id.
+- [**POST ->** /api/v1/media ] - Endpoint onde será possível realizar um upload de um vídeo, música ou imagem com tamanho máximo de 5MB
+- [**GET ->** /api/v1/media/story/{story_id} ] - Endpoint onde ao passar o id do conto retorne a url das mídias vinculadas
+- [**DELETE ->** /api/v1/media/{media_id} ] - Endpoint onde seja possível excluir uma mídia relacionada a um usuário.
