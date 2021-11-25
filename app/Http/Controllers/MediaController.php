@@ -126,7 +126,7 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function show(Media $media)
+    public function show($media)
     {
     
         return response()->json($media);
@@ -176,9 +176,20 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, $user_id)
+    public function destroy($media)
     {
-        $media = Media::where('id', $id)->with('user')->where('user_id', $user_id)->delete();
-        return $media;
+        return $media->delete();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  integer  $media
+     * @param  integer  $user_id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroyByUser($media_id, $user_id)
+    {
+        return Media::where('id', $media_id)->with('user')->where('user_id', $user_id)->delete();
     }
 }

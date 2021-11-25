@@ -34,7 +34,6 @@ Route::middleware(['throttle:30|60,1'])
                  */
                 $router->apiResource('media', 'MediaController');
                 $router->get('/media/story/{story_id}', 'MediaController@showByStory');
+                $router->delete('/media/{media_id}/user/{user_id}', 'MediaController@destroyByUser');
             });
     });
-
-
