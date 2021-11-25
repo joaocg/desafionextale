@@ -40,7 +40,7 @@ I am passionate about technology and since I was 12 years old I have ventured in
 - [**DELETE ->** /api/v1/story/{story_id} ] - Endpoint to delete a story by its id.
 - [**POST ->** /api/v1/media ] - Endpoint where it will be possible to upload a video, music or image with a maximum size of 5MB
 - [**GET ->** /api/v1/media/story/{story_id} ] - Endpoint where, when passing the tale id, return the linked media url
-- [**DELETE ->** /api/v1/media/{media_id} ] - Endpoint where you can delete a media related to a user.
+- [**DELETE ->** /api/v1/media/{media_id}/user/{user_id} ] - Endpoint where you can delete a media related to a user.
 
 ## License
 
@@ -68,4 +68,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - [**POST ->** /api/v1/media ] - Endpoint onde será possível realizar um upload de um vídeo, música ou imagem com tamanho máximo de 5MB
 - [**GET ->** /api/v1/media/story/{story_id} ] - Endpoint onde ao passar o id do conto retorne a url das mídias vinculadas
-- [**DELETE ->** /api/v1/media/{media_id} ] - Endpoint onde seja possível excluir uma mídia relacionada a um usuário.
+- [**DELETE ->** /api/v1/media/{media_id}/user/{user_id} ] - Endpoint onde seja possível excluir uma mídia relacionada a um usuário.
