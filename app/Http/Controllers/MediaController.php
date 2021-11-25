@@ -126,7 +126,7 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function show($media)
+    public function show(Media $media)
     {
     
         return response()->json($media);
