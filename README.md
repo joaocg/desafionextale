@@ -16,6 +16,7 @@ This challenge is part of the backend developer selection phase. Your assessment
 - $ composer intall
 - $ cp .env.example ./.env
 - $ php artisan key:generate
+- $ php artisan storage:link
 - $ nano or vi .env
 
 **Configure the database credentials in the .env file opened with the previous command, save and close file.**
