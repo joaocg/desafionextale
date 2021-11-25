@@ -29,14 +29,11 @@ Route::middleware(['throttle:30|60,1'])
                  * Routs Stories
                  */
                 $router->apiResource('story', 'StoryController');
-                $router->post('story/bulk-update', 'StoryController@bulkUpdate');
-                $router->get('/stories', 'StoryController@showByUser');
                 /**
                  * Routs Medias
                  */
                 $router->apiResource('media', 'MediaController');
-                $router->post('media/bulk-update', 'MediaController@bulkUpdate');
-                $router->get('/medias', 'MediaController@showByUser');
+                $router->get('/media/story/{story_id}', 'MediaController@showByStory');
             });
     });
 
